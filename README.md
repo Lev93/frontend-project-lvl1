@@ -6,7 +6,7 @@
 
 
 #Игры разума
-### Games: [Brain-Even](xxxxxxxxx),[Brain-Calc](xxxxxxxxx),
+### Games: [Brain-Even](xxxxxxxxx),[Brain-Calc](xxxxxxxxx),[Brain-NOD](xxxxxxxxx),
 
 Move to folder
 

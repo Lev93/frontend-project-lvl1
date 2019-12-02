@@ -6,7 +6,7 @@
 
 
 #Игры разума
-### Games: [Brain-Even](xxxxxxxxx),[Brain-Calc](xxxxxxxxx),[Brain-GSD](xxxxxxxxx),[Brain-Progression](xxxxxxxxx),
+### Games: [Brain-Even](xxxxxxxxx),[Brain-Calc](xxxxxxxxx),[Brain-GSD](xxxxxxxxx),[Brain-Progression](xxxxxxxxx),[Brain-Prime](https://asciinema.org/a/H3cHEcvx46f6fGJQ8kpXtIfVi),
 
 Move to folder
 

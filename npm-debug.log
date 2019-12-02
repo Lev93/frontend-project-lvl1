@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', '--dry-run' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/mnt/c/Users/Lev3/documents/Github/frontend-project-lvl1',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/lev/.npm/braingames/1.0.0/package.tgz not in flight; packing
+9 info lifecycle braingames@1.0.0~prepublish: braingames@1.0.0
+10 silly lifecycle braingames@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/home/lev/.npm/braingames/1.0.0/package.tgz',
+11 verbose tar pack   '/mnt/c/Users/Lev3/documents/Github/frontend-project-lvl1' ]
+12 verbose tarball /home/lev/.npm/braingames/1.0.0/package.tgz
+13 verbose folder /mnt/c/Users/Lev3/documents/Github/frontend-project-lvl1
+14 verbose addLocalTarball adding from inside cache /home/lev/.npm/braingames/1.0.0/package.tgz
+15 silly cache afterAdd braingames@1.0.0
+16 verbose afterAdd /home/lev/.npm/braingames/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /home/lev/.npm/braingames/1.0.0/package/package.json written
+18 silly publish { name: 'braingames',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: '"Первый проеэкт по JS"',
+18 silly publish   main: 'index.js',
+18 silly publish   bin:
+18 silly publish    { 'brain-games': 'dist/bin/brain-games.js',
+18 silly publish      'brain-even': 'dist/bin/brain-even.js',
+18 silly publish      'brain-calc': 'dist/bin/brain-calc.js',
+18 silly publish      'brain-gsd': 'dist/bin/brain-gsd.js',
+18 silly publish      'brain-progression': 'dist/bin/brain-progression.js',
+18 silly publish      'brain-prime': 'dist/bin/brain-prime.js' },
+18 silly publish   files: [ 'dist' ],
+18 silly publish   scripts:
+18 silly publish    { build: 'cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline',
+18 silly publish      prepublishOnly: 'npm run build' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/Lev93/frontend-project-lvl1.git' },
+18 silly publish   author: { name: 'Lev Riabov' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs:
+18 silly publish    { url: 'https://github.com/Lev93/frontend-project-lvl1/issues' },
+18 silly publish   homepage: 'https://github.com/Lev93/frontend-project-lvl1#readme',
+18 silly publish   devDependencies:
+18 silly publish    { 'cross-env': '^6.0.3',
+18 silly publish      eslint: '^6.7.1',
+18 silly publish      'eslint-config-airbnb-base': '^14.0.0',
+18 silly publish      'eslint-plugin-import': '^2.18.2' },
+18 silly publish   dependencies:
+18 silly publish    { '@babel/cli': '^7.7.4',
+18 silly publish      '@babel/core': '^7.7.4',
+18 silly publish      '@babel/node': '^7.7.4',
+18 silly publish      '@babel/preset-env': '^7.7.4',
+18 silly publish      '@hexlet/pairs': '^1.0.10',
+18 silly publish      'babel-eslint': '^10.0.3',
+18 silly publish      'eslint-plugin-babel': '^5.3.0',
+18 silly publish      'readline-sync': '^1.4.10' },
+18 silly publish   readme: '# Игры разума\r\n\r\n[![Maintainability](https://api.codeclimate.com/v1/badges/2213a836e58bd57845a8/maintainability)](https://codeclimate.com/github/Lev93/frontend-project-lvl1/maintainability)\r\n[![Test Coverage](https://api.codeclimate.com/v1/badges/2213a836e58bd57845a8/test_coverage)](https://codeclimate.com/github/Lev93/frontend-project-lvl1/test_coverage)\r\n[![Build Status](https://travis-ci.org/Lev93/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Lev93/frontend-project-lvl1)\r\n\r\n\r\n#Игры разума\r\n### Games: [Brain-Even](xxxxxxxxx),[Brain-Calc](xxxxxxxxx),[Brain-GSD](xxxxxxxxx),[Brain-Progression](xxxxxxxxx),[Brain-Prime](xxxxxxxxx),\r\n\r\nMove to folder\r\n\r\nRun `make install`',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '46b6c30bb5c5387f4cc66891840d65bb3951b7c9',
+18 silly publish   _id: 'braingames@1.0.0',
+18 silly publish   _shasum: '80939d39b2fe29ae347594ecfc0a7ddbeafc0cd9',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name braingames
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/braingames
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/lev/.npm/braingames/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/braingames
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 6:22:42 PM
+29 verbose request using bearer token for auth
+30 verbose request id bf050d8d64f8ffb0
+31 http request PUT https://registry.npmjs.org/braingames
+32 http 403 https://registry.npmjs.org/braingames
+33 verbose headers { date: 'Mon, 02 Dec 2019 15:22:45 GMT',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'transfer-encoding': 'chunked',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'set-cookie':
+33 verbose headers    [ '__cfduid=d7c2fd529d20d536d8ceb0d1f31b20d9e1575300165; expires=Wed, 01-Jan-20 15:22:45 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+33 verbose headers   'cf-ray': '53ee4c510ee9c3e8-LED',
+33 verbose headers   'cf-cache-status': 'DYNAMIC',
+33 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+33 verbose headers   vary: 'Accept-Encoding',
+33 verbose headers   server: 'cloudflare',
+33 verbose headers   'content-encoding': 'gzip' }
+34 verbose request invalidating /home/lev/.npm/registry.npmjs.org/braingames on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish "braingames". Are you logged in as the correct user? : braingames
+36 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at /usr/share/npm/node_modules/npm-registry-client/lib/request.js:178:7
+36 verbose stack     at Gunzip.onEnd (zlib.js:131:5)
+36 verbose stack     at emitNone (events.js:111:20)
+36 verbose stack     at Gunzip.emit (events.js:208:7)
+36 verbose stack     at endReadableNT (_stream_readable.js:1064:12)
+36 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:138:11)
+36 verbose stack     at process._tickCallback (internal/process/next_tick.js:180:9)
+37 verbose statusCode 403
+38 verbose pkgid braingames
+39 verbose cwd /mnt/c/Users/Lev3/documents/Github/frontend-project-lvl1
+40 error Linux 4.4.0-17134-Microsoft
+41 error argv "/usr/bin/node" "/usr/bin/npm" "publish" "--dry-run"
+42 error node v8.10.0
+43 error npm  v3.5.2
+44 error code E403
+45 error You do not have permission to publish "braingames". Are you logged in as the correct user? : braingames
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]

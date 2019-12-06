@@ -1,9 +1,9 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
-const numberOfAttempts = 3;
+const attemptsCount = 3;
 
-const gameProcess = (counter, data) => {
+const processGamePlay = (counter, data) => {
   const n = counter;
   if (n === 0) {
     return true;
@@ -22,7 +22,7 @@ const gameProcess = (counter, data) => {
     return false;
   }
   console.log('Correct!');
-  return gameProcess(n - 1, data);
+  return processGamePlay(n - 1, data);
 };
 
 const run = (data, gameDescription) => {
@@ -33,7 +33,7 @@ const run = (data, gameDescription) => {
   console.log(`Hello, ${name}\n`);
   console.log(
     `${
-      gameProcess(numberOfAttempts, data) ? 'Congratulations, ' : "Let's try again, "
+      processGamePlay(attemptsCount, data) ? 'Congratulations, ' : "Let's try again, "
     }${name}!`,
   );
 };

@@ -6,8 +6,25 @@
 
 
 #Игры разума
-### Games: [Brain-Even](https://asciinema.org/a/SIbKOCMldaEGG9uY30esyxhph),[Brain-Calc](https://asciinema.org/a/dYpyhdQMdqLUxA1vlqORIE33z),[Brain-GSD](https://asciinema.org/a/IMUbL83iw7Sxiuq0pg8S1GoD1),[Brain-Progression](https://asciinema.org/a/bCDy6u39F1pBSEjtmnjgkfC1P),[Brain-Prime](https://asciinema.org/a/H3cHEcvx46f6fGJQ8kpXtIfVi),
 
+### Список игр: [brain-even](https://asciinema.org/a/SIbKOCMldaEGG9uY30esyxhph),[brain-calc](https://asciinema.org/a/dYpyhdQMdqLUxA1vlqORIE33z),[brain-gcd](https://asciinema.org/a/IMUbL83iw7Sxiuq0pg8S1GoD1),[brain-progression](https://asciinema.org/a/bCDy6u39F1pBSEjtmnjgkfC1P),[brain-prime](https://asciinema.org/a/H3cHEcvx46f6fGJQ8kpXtIfVi)
+
+### Установка:
 Move to folder
 
 Run `make install`
+
+### Запуск:
+Для запуска напишите название игры в консоль.
+
+### Описание Игр:
+#### brain-even
+Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
+#### brain-calc
+Суть игры в следующем: пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+#### brain-gcd
+Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+#### brain-progression
+Показываем игроку ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+#### brain-prime
+Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если нет.

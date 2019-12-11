@@ -15,9 +15,9 @@ const even = (num) => {
 };
 
 const getData = () => {
-  const number = randomNumber(randomMin, randomMax);
+  const question = randomNumber(randomMin, randomMax);
   const rightAnswer = even(number);
-  const pair = cons(number, rightAnswer);
+  const pair = cons(question, rightAnswer);
   return pair;
 };
 

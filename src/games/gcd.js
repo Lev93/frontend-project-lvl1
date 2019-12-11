@@ -16,9 +16,9 @@ const gcd = (x, y) => {
 const getData = () => {
   const num1 = randomNumber(randomMin, randomMax);
   const num2 = randomNumber(randomMin, randomMax);
-  const numbers = `${num1} ${num2}`;
+  const question = `${num1} ${num2}`;
   const rightAnswer = gcd(num1, num2).toString();
-  const pair = cons(numbers, rightAnswer);
+  const pair = cons(question, rightAnswer);
   return pair;
 };
 export default () => run(getData, gameDescription);

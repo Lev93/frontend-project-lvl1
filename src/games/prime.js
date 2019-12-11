@@ -20,9 +20,9 @@ const isPrime = (number) => {
   return true;
 };
 const getData = () => {
-  const number = randomNumber(randomMin, randomMax);
+  const question = randomNumber(randomMin, randomMax);
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  const pair = cons(number, rightAnswer);
+  const pair = cons(question, rightAnswer);
   return pair;
 };
 export default () => run(getData, gameDescription);

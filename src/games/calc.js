@@ -24,7 +24,7 @@ const calculate = (num1, operator, num2) => {
       result = (num1 / num2) === 'Infinity' ? 0 : 0;
       break;
     default:
-      result = 0;
+      result = null;
   }
   return result;
 };

@@ -7,10 +7,16 @@ const randomMax = 100;
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 
+const even = (num) => {
+  if (num % 2 === 0) {
+    return 'yes';
+  }
+  return 'no';
+};
 
 const getData = () => {
   const number = randomNumber(randomMin, randomMax);
-  const rightAnswer = number % 2 === 0 ? 'yes' : 'no';
+  const rightAnswer = even(number);
   const pair = cons(number, rightAnswer);
   return pair;
 };

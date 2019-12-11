@@ -2,9 +2,7 @@
   "name": "braingames",
   "version": "1.0.0",
   "description": "\"Первый проеэкт по JS\"",
-  "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gsd": "dist/bin/brain-gcd.js",
@@ -22,6 +20,9 @@
     "type": "git",
     "url": "git+https://github.com/Lev93/frontend-project-lvl1.git"
   },
+  "keywords": [
+    "hexlet"
+  ],
   "author": "Lev Riabov",
   "license": "ISC",
   "bugs": {
@@ -32,16 +33,16 @@
     "cross-env": "^6.0.3",
     "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
-  },
-  "dependencies": {
+    "eslint-plugin-import": "^2.18.2",
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
-    "@hexlet/pairs": "^1.0.10",
     "babel-eslint": "^10.0.3",
-    "eslint-plugin-babel": "^5.3.0",
-    "readline-sync": "^1.4.10"
+    "eslint-plugin-babel": "^5.3.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "@hexlet/pairs": "^1.0.10"
   }
 }

@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 const attemptsCount = 3;
 
-const processGamePlay = (counter, data) => {
+const getResultGame = (counter, data) => {
   const n = counter;
   if (n === 0) {
     return true;
@@ -22,7 +22,7 @@ const processGamePlay = (counter, data) => {
     return false;
   }
   console.log('Correct!');
-  return processGamePlay(n - 1, data);
+  return getResultGame(n - 1, data);
 };
 
 const run = (data, gameDescription) => {
@@ -33,7 +33,7 @@ const run = (data, gameDescription) => {
   console.log(`Hello, ${name}\n`);
   console.log(
     `${
-      processGamePlay(attemptsCount, data) ? 'Congratulations, ' : "Let's try again, "
+      getResultGame(attemptsCount, data) ? 'Congratulations, ' : "Let's try again, "
     }${name}!`,
   );
 };

@@ -3,8 +3,8 @@ node_js:
   - node
 
 script:
-  - npx eslint src/bin/brain-even.js
-  - npx eslint src/bin/brain-calc.js
-  - npx eslint src/bin/brain-gcd.js
-  - npx eslint src/bin/brain-prime.js
-  - npx eslint src/bin/brain-progression.js
+  - make lint src/bin/brain-even.js
+  - make lint src/bin/brain-calc.js
+  - make lint src/bin/brain-gcd.js
+  - make lint src/bin/brain-prime.js
+  - make lint src/bin/brain-progression.js

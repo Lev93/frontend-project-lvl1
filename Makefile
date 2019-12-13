@@ -8,4 +8,8 @@ publish:
 		npm publish --dry-run
 
 lint: 
-		npx eslint
+		npx eslint src/bin/brain-even.js
+        npx eslint src/bin/brain-calc.js
+		npx eslint src/bin/brain-gcd.js
+		npx eslint src/bin/brain-prime.js
+		npx eslint src/bin/brain-progression.js

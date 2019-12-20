@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import run from '../engine';
-import randomNumber from '../random';
+import getRandomNumber from '../random';
 
 const gameDescription = 'What is the result of the expression?';
 const randomMin = 0;
@@ -30,12 +30,11 @@ const calculate = (num1, operator, num2) => {
 };
 
 const getData = () => {
-  const mathOperation = mathOperations[randomNumber(randomMin, mathOperations.length - 1)];
-  const a = randomNumber(randomMin, randomMax);
-  const b = randomNumber(randomMin, randomMax);
+  const mathOperation = mathOperations[getRandomNumber(randomMin, mathOperations.length - 1)];
+  const a = getRandomNumber(randomMin, randomMax);
+  const b = getRandomNumber(randomMin, randomMax);
   const expression = `${a} ${mathOperation} ${b}`;
   const rightAnswer = calculate(a, mathOperation, b).toString();
-  const pair = cons(expression, rightAnswer);
-  return pair;
+  return cons(expression, rightAnswer);
 };
 export default () => run(getData, gameDescription);

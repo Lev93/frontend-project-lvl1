@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import run from '../engine';
-import randomNumber from '../random';
+import getRandomNumber from '../random';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const randomMin = -100;
@@ -20,8 +20,8 @@ const isPrime = (number) => {
   return true;
 };
 const getData = () => {
-  const question = randomNumber(randomMin, randomMax);
-  const rightAnswer = isPrime(number) ? 'yes' : 'no';
+  const question = getRandomNumber(randomMin, randomMax);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
   const pair = cons(question, rightAnswer);
   return pair;
 };

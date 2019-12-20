@@ -1,24 +1,18 @@
 import { cons } from '@hexlet/pairs';
 import run from '../engine';
-import randomNumber from '../random';
+import getRandomNumber from '../random';
 
 const randomMin = 0;
 const randomMax = 100;
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 
-const even = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+const isEven = (number) => number % 2 === 0;
 
 const getData = () => {
-  const question = randomNumber(randomMin, randomMax);
-  const rightAnswer = even(number);
-  const pair = cons(question, rightAnswer);
-  return pair;
+  const question = getRandomNumber(randomMin, randomMax);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, rightAnswer);
 };
 
 export default () => run(getData, gameDescription);

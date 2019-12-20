@@ -3,8 +3,4 @@ node_js:
   - node
 
 script:
-  - make lint1
-  - make lint2
-  - make lint3
-  - make lint4
-  - make lint5
+  - make lint

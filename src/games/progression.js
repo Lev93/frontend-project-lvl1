@@ -1,33 +1,30 @@
 import { cons } from '@hexlet/pairs';
 import run from '../engine';
-import randomNumber from '../random';
+import getRandomNumber from '../random';
 
-const randomFirst = 0;
-const randomLast = 100;
+const randomMin = 0;
+const randomMax = 100;
 const length = 10;
 
 const gameDescription = 'What number is missing in the progression?';
 
-const buildArithmeticProgression = (start, lengthOfProgression, constStep) => {
-  const iter = (firstNumber, lengthForIter, step, acc) => {
-    if (lengthForIter === 0) {
-      return acc;
-    }
-    const newAcc = [...acc, firstNumber];
-    return iter(firstNumber + step, lengthForIter - 1, step, newAcc);
-  };
-  return iter(start, lengthOfProgression, constStep, []);
+const buildArithmeticProgression = (start, lengthOfProgression, diff) => {
+  let progression = [];
+  for (let i = 0; i < lengthOfProgression; i += 1) {
+    progression = [...progression, start + diff * i];
+  }
+
+  return progression;
 };
 
 const getData = () => {
-  const startNumber = randomNumber(randomFirst, randomLast);
-  const constantStep = randomNumber(-10, 10);
-  const arithmeticProgression = buildArithmeticProgression(startNumber, length, constantStep);
-  const hiddenElementIndex = randomNumber(0, arithmeticProgression.length - 1);
-  const progression = [...arithmeticProgression.slice(0, hiddenElementIndex), '..', ...arithmeticProgression.slice(hiddenElementIndex + 1)];
+  const startNumber = getRandomNumber(randomMin, randomMax);
+  const diff = getRandomNumber(1, 9);
+  const arithmeticProgression = buildArithmeticProgression(startNumber, length, diff);
+  const hiddenElementIndex = getRandomNumber(0, arithmeticProgression.length - 1);
+  const question = [...arithmeticProgression.slice(0, hiddenElementIndex), '..', ...arithmeticProgression.slice(hiddenElementIndex + 1)];
   const rightAnswer = arithmeticProgression[hiddenElementIndex].toString();
-  const pair = cons(progression.join(' '), rightAnswer);
-  return pair;
+  return cons(question.join(' '), rightAnswer);
 };
 
 export default () => run(getData, gameDescription);

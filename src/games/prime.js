@@ -10,7 +10,7 @@ const isPrime = (number) => {
   if (number < 2 || (number % 2 === 0 && number !== 2)) {
     return false;
   }
-  const max = Math.round(Math.sqrt(number)) + 1;
+  const max = Math.round(number / 2);
 
   for (let i = 3; i < max; i += 2) {
     if (number % i === 0) {

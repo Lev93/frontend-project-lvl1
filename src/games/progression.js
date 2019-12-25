@@ -18,9 +18,9 @@ const buildArithmeticProgression = (start, lengthOfProgression, diff) => {
 };
 
 const getData = () => {
-  const startNumber = getRandomNumber(randomMin, randomMax);
+  const startElement = getRandomNumber(randomMin, randomMax);
   const diff = getRandomNumber(1, 9);
-  const arithmeticProgression = buildArithmeticProgression(startNumber, length, diff);
+  const arithmeticProgression = buildArithmeticProgression(startElement, length, diff);
   const hiddenElementIndex = getRandomNumber(0, arithmeticProgression.length - 1);
   const question = [...arithmeticProgression.slice(0, hiddenElementIndex), '..', ...arithmeticProgression.slice(hiddenElementIndex + 1)];
   const rightAnswer = arithmeticProgression[hiddenElementIndex].toString();

@@ -8,7 +8,7 @@ const randomMax = 100;
 const mathOperations = ['+', '-', '*', '/'];
 
 const calculate = (num1, operator, num2) => {
-  let result = 0;
+  let result;
 
   switch (operator) {
     case '+':
@@ -21,10 +21,10 @@ const calculate = (num1, operator, num2) => {
       result = num1 * num2;
       break;
     case '/':
-      result = (num1 / num2) === 'Infinity' ? 0 : 0;
+      result = (num1 / num2) === 'Infinity' ? 0 : (num1 / num2);
       break;
     default:
-      result = null;
+      return null;
   }
   return result;
 };
@@ -33,8 +33,8 @@ const getData = () => {
   const mathOperation = mathOperations[getRandomNumber(randomMin, mathOperations.length - 1)];
   const a = getRandomNumber(randomMin, randomMax);
   const b = getRandomNumber(randomMin, randomMax);
-  const expression = `${a} ${mathOperation} ${b}`;
+  const question = `${a} ${mathOperation} ${b}`;
   const rightAnswer = calculate(a, mathOperation, b).toString();
-  return cons(expression, rightAnswer);
+  return cons(question, rightAnswer);
 };
 export default () => run(getData, gameDescription);

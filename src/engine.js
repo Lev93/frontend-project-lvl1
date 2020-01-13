@@ -12,7 +12,8 @@ const run = (getData, gameDescription) => {
 
   const getResultGame = (counter) => {
     if (counter === 0) {
-      return console.log(`${'Congratulations, '}${name}!`);
+      console.log(`${'Congratulations, '}${name}!`);
+      return;
     }
 
     const questionPair = getData();
@@ -22,14 +23,13 @@ const run = (getData, gameDescription) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-      );
-      return console.log(`${"Let's try again, "}${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`${"Let's try again, "}${name}!`);
+      return;
     }
     console.log('Correct!');
-    return getResultGame(counter - 1);
+    getResultGame(counter - 1);
   };
-  return getResultGame(attemptsCount, getData);
+  return getResultGame(attemptsCount);
 };
 export default run;
